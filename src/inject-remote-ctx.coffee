@@ -79,7 +79,7 @@ module.exports = (app, options) ->
         method.accepts.push
           arg: REMOTE_ARG
           description: '**Do not implement in clients**.'
-          type: Object
+          type: 'Object'
           injectCtx: true
           # avoid to get cyclical loop in the SharedMethod.convertArg method.
           # the issue is the traverse(raw).forEach(...) which seems to get caught up on some async flow with the concurrent http reqs.
